@@ -3,6 +3,8 @@
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
+  position: 'relative',
+  overflow: 'hidden',
   width: '100%',
   height: '100%',
   padding: '34px 44px',
@@ -12,6 +14,41 @@
   border: '1px solid #40546A',
   borderRadius: 18
 }}>
+  <svg width="860" height="250" style={{
+    position: 'absolute',
+    top: 0,
+    left: 0
+  }}>
+    <defs>
+      <radialGradient id="hero-light">
+        <stop offset="0%" stopColor="rgba(153,200,244,0.40)" />
+        <stop offset="100%" stopColor="rgba(153,200,244,0)" />
+      </radialGradient>
+    </defs>
+
+    <ellipse
+      cx="750"
+      cy="130"
+      rx="250"
+      ry="175"
+      fill="url(#hero-light)"
+    >
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0;-130 0;0 0"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+      <animate
+        attributeName="opacity"
+        values="0.35;0.85;0.35"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+    </ellipse>
+  </svg>
+
   <div style={{
     display: 'flex',
     justifyContent: 'space-between',
@@ -99,10 +136,7 @@ I build applications that make business operations easier to manage. My work spa
     borderRadius: 2
   }} />
 
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column'
-  }}>
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
     <div style={{
       display: 'flex',
       color: '#A9BED5',
@@ -156,10 +190,7 @@ I build applications that make business operations easier to manage. My work spa
     borderRadius: 2
   }} />
 
-  <div style={{
-    display: 'flex',
-    flexDirection: 'column'
-  }}>
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
     <div style={{
       display: 'flex',
       color: '#A9BED5',
